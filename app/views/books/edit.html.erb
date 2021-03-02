@@ -8,5 +8,9 @@
   <%= f.submit 'Update Book' %>
 <% end %>
 
-<a class="show" href="/books/#{book.id}">Show</a>
+<%= link_to "show", "/books/#{@book.id}" %>
 <a class="back" href="/books">Back</a>
+
+<% if @book.errors.any? %>
+   <p>"error"</p>
+<% end %>
